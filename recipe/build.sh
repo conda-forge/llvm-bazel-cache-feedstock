@@ -23,8 +23,8 @@ bazel build \
     --cpu ${TARGET_CPU} \
     -- \
     @llvm-project//llvm/... @llvm-project//mlir/... \
-    -@llvm-project//llvm:yaml2obj -@llvm-project//llvm:obj2yaml -@llvm-project//llvm:llvm-pdbutil -@llvm-project//llvm:llvm-rc \
-    -@llvm-project//mlir:mlir-pdll -@llvm-project//mlir/python/...
+    -@llvm-project//llvm:yaml2obj -@llvm-project//llvm:obj2yaml -@llvm-project//llvm:llvm-pdbutil -@llvm-project//llvm:llvm-rc -@llvm-project//llvm:llvm-xray -@llvm-project//llvm:llvm-profdata \
+    -@llvm-project//mlir:mlir-pdll -@llvm-project//mlir:mlir-opt -@llvm-project//mlir:mlir-lsp-server -@llvm-project//mlir:mlir-vulkan-runner -@llvm-project//mlir:mlir-reduce -@llvm-project//mlir/python/...
 popd
 
 mkdir -p ${PREFIX}/share/llvm-bazel-cache
