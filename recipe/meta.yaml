@@ -28,7 +28,7 @@ source:
     - patches/zstd.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   # conda-build breaks on this. There is no need to relocate anything, so skip it.
   binary_relocation: false
